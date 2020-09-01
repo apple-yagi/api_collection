@@ -8,7 +8,7 @@
   <tr>
     <td><%= d["id"] %></td>
     <td><%= d["title"] %></td>
-    <td><%= d["url"] %></td>
+    <td><%= link_to d["url"], d["url"], target: :_blank %></td>
   </tr>
   <% end %>
 </table>

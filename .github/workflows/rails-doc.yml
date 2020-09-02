@@ -1,0 +1,21 @@
+name: rails-doc
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: [master, dev]
+
+jobs:
+  compose-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: docker-compose build
+      - name: up
+        run: docker-compose up
+      - name: down
+        run: docker-compose down

@@ -8,20 +8,7 @@ on:
     branches: [master, dev]
 
 jobs:
-  compose-test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build
-        run: docker-compose build
-      - name: up
-        run: docker-compose up -d
-      - name: down
-        run: docker-compose down
-
   deploy:
-    needs: [compose-test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

@@ -15,4 +15,4 @@ clean:
 start-production:
 	docker-compose -f production.yml up --build -d
 restart-production:
-	docker-compose -f production.yml down && docker-compose -f production.yml up --build -d && docker rmi `docker images -q`
+	docker-compose -f production.yml down && docker-compose -f production.yml up --build -d

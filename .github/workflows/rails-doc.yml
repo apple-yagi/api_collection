@@ -28,7 +28,7 @@ jobs:
       - name: ssh settings
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        run: mkdir ~/.ssh && touch ~/.ssh/private_key.pem && echo "$PRIVATE_KEY" > ~/.ssh/private_key.pem && chmod 600 ~/.ssh/private_key.pem
+        run: chmod 700 ~/ && mkdir ~/.ssh && touch ~/.ssh/private_key.pem && echo "$PRIVATE_KEY" > ~/.ssh/private_key.pem && chmod 600 ~/.ssh/private_key.pem
       - name: Deploy
         env:
           USER_NAME: ${{ secrets.USER_NAME }}

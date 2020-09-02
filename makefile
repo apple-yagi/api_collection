@@ -12,3 +12,5 @@ ps:
 	docker ps -a
 clean:
 	docker-compose down && docker images -aq | xargs docker rmi
+restart-production:
+	docker-compose -f production.yml down && docker-compose -f production.yml up --build -d

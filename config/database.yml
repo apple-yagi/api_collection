@@ -13,3 +13,10 @@ development:
 test:
   <<: *default
   database: myapp_test
+
+production:
+  <<: *default
+  database: ENV['POSTGRES_DB']
+  username: ENV['POSTGRES_USERNAME']
+  password: ENV['POSTGRES_PASSWORD']
+  host: ENV['POSTGRES_HOST']

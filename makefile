@@ -13,4 +13,4 @@ ps:
 clean:
 	docker-compose down && docker images -aq | xargs docker rmi
 restart-production:
-	docker-compose -f production.yml down　--rmi all --volumes && docker-compose -f production.yml up --build -d
+	docker-compose -f production.yml down --rmi all --volumes && docker-compose -f production.yml up --build -d

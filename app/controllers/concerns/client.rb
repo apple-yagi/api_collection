@@ -8,7 +8,13 @@ class Client
   end
 
   def fetch_data
-    json = Net::HTTP.get(@uri)
-    JSON.parse(json)
+    req = Net::HTTP::Get.new(@uri)
+    req['Authorization'] = "Bearer #{ENV["QIITA_ACCESS_TOKEN"]}"
+
+    http = Net::HTTP.new(@uri.host, @uri.port)
+    http.use_ssl = true
+    res = http.request(req)
+  
+    return JSON.parse(res.body)
   end
 end

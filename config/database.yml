@@ -16,7 +16,7 @@ test:
 
 production:
   <<: *default
-  database: ENV['POSTGRES_DB']
-  username: ENV['POSTGRES_USERNAME']
-  password: ENV['POSTGRES_PASSWORD']
-  host: ENV['POSTGRES_HOST']
+  database: <%= ENV.fetch("POSTGRES_DB") %>
+  username: <%= ENV.fetch("POSTGRES_USERNAME") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  host: <%= ENV.fetch("POSTGRES_HOST") %>

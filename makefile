@@ -4,6 +4,8 @@ down:
 	docker-compose down
 build:
 	docker-compose build
+start:
+	docker-compose up --build -d
 restart:
 	docker-compose down && docker-compose up --build -d
 ps:

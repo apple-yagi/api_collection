@@ -11,4 +11,4 @@ restart:
 ps:
 	docker ps -a
 clean:
-	docker ps -aq | xargs docker rm && docker images -aq | xargs docker rmi
+	docker-compose down && docker images -aq | xargs docker rmi

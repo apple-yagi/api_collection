@@ -15,4 +15,4 @@ clean:
 start-production:
 	docker-compose -f production.yml up --build -d
 restart-production:
-	docker-compose -f production.yml down && docker image prune && docker-compose -f production.yml up --build -d
+	docker-compose -f production.yml down && docker image prune -f && docker-compose -f production.yml up --build -d

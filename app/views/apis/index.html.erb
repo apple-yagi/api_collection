@@ -1,0 +1,16 @@
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Domain</th>
+    <th>URL</th>
+    <th>Description</th>
+  </tr>
+  <% @apis.each do |api| %>
+  <tr>
+    <td><%= api[:id] %></td>
+    <td><%= api[:domain] %></td>
+    <td><%= link_to api[:url], api[:url], target: :_blank %></td>
+    <td><%= api[:description] %></td>
+  </tr>
+  <% end %>
+</table>

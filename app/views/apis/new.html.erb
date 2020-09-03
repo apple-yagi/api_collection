@@ -1,0 +1,15 @@
+<%= form_with model: @createApi do |form| %>
+<div class="field">
+  <%= form.label :domain, "Domain" %>
+  <%= form.text_field :domain %>
+</div>
+<div class="field">
+  <%= form.label :url, "URL" %>
+  <%= form.text_field :url %>
+</div>
+<div class="field">
+  <%= form.label :description, "Description" %>
+  <%= form.text_field :description %>
+</div>
+<%= form.submit %>
+<% end %>

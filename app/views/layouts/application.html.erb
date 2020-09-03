@@ -10,19 +10,38 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"
+    defer="defer"></script>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar fixed-top navbar-dark bg-dark mb-2">
-      <a href="/" class="navbar-brand">Top</a>
+  <header class="base-color">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/apis">Top</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/apis/new">New</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
-  <main class="container mt-5">
+  <main class="container base-color">
     <%= yield %>
   </main>
-  <footer>
-    <nav class="navbar navbar-dark bg-dark">
+  <footer class="base-color">
+    <nav class="navbar navbar-light bg-light">
       <span class="navbar-brand"><%=  Date.today %></span>
     </nav>
   </footer>

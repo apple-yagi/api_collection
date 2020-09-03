@@ -12,7 +12,6 @@ RUN bundle install
 COPY . /myapp
 
 RUN yarn install --check-files
-RUN bundle exec rake assets:precompile
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
